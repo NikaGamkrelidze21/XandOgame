@@ -50,47 +50,46 @@ class MainActivity : AppCompatActivity() {
     }
     private fun checkWinner() {
         if (button00.text.toString().isNotEmpty() &&
-            button00.text.toString() == button01.text.toString() &&
-            button00.text.toString() == button02.text.toString()
-            ) { showWinnerToast(button00.text.toString())
-        }else if (button10.text.toString().isNotEmpty() &&
+                button00.text.toString() == button01.text.toString() &&
+                button00.text.toString() == button02.text.toString()
+        ) {
+            showWinnerToast(button00.text.toString())
+        } else if (button10.text.toString().isNotEmpty() &&
                 button10.text.toString() == button11.text.toString() &&
                 button10.text.toString() == button12.text.toString()
-                ) {showWinnerToast(button10.text.toString())
-        }else if (button20.text.toString().isNotEmpty() &&
-            button20.text.toString() == button21.text.toString() &&
-            button20.text.toString() == button22.text.toString()
-        ) {showWinnerToast(button20.text.toString())
-        }
-
-
-        else if (button00.text.toString().isNotEmpty() &&
-            button00.text.toString() == button10.text.toString() &&
-            button00.text.toString() == button20.text.toString()
-        ) { showWinnerToast(button00.text.toString())
-        }else if (button01.text.toString().isNotEmpty() &&
-            button01.text.toString() == button11.text.toString() &&
-            button01.text.toString() == button12.text.toString()
-        ) {showWinnerToast(button10.text.toString())
-        }else if (button02.text.toString().isNotEmpty() &&
-            button02.text.toString() == button12.text.toString() &&
-            button02.text.toString() == button22.text.toString()
-        ) {showWinnerToast(button20.text.toString())
-        }
-
-
-        else if (button00.text.toString().isNotEmpty() &&
-            button00.text.toString() == button11.text.toString() &&
-            button00.text.toString() == button22.text.toString()
-        ) {showWinnerToast(button20.text.toString())
-        }else if (button02.text.toString().isNotEmpty() &&
-            button02.text.toString() == button11.text.toString() &&
-            button02.text.toString() == button20.text.toString()
-        ) {showWinnerToast(button20.text.toString())
-        }
-
-
-        else if (!button00.isClickable &&
+        ) {
+            showWinnerToast(button10.text.toString())
+        } else if (button20.text.toString().isNotEmpty() &&
+                button20.text.toString() == button21.text.toString() &&
+                button20.text.toString() == button22.text.toString()
+        ) {
+            showWinnerToast(button20.text.toString())
+        } else if (button00.text.toString().isNotEmpty() &&
+                button00.text.toString() == button10.text.toString() &&
+                button00.text.toString() == button20.text.toString()
+        ) {
+            showWinnerToast(button00.text.toString())
+        } else if (button01.text.toString().isNotEmpty() &&
+                button01.text.toString() == button11.text.toString() &&
+                button01.text.toString() == button12.text.toString()
+        ) {
+            showWinnerToast(button10.text.toString())
+        } else if (button02.text.toString().isNotEmpty() &&
+                button02.text.toString() == button12.text.toString() &&
+                button02.text.toString() == button22.text.toString()
+        ) {
+            showWinnerToast(button20.text.toString())
+        } else if (button00.text.toString().isNotEmpty() &&
+                button00.text.toString() == button11.text.toString() &&
+                button00.text.toString() == button22.text.toString()
+        ) {
+            showWinnerToast(button20.text.toString())
+        } else if (button02.text.toString().isNotEmpty() &&
+                button02.text.toString() == button11.text.toString() &&
+                button02.text.toString() == button20.text.toString()
+        ) {
+            showWinnerToast(button20.text.toString())
+        } else if (!button00.isClickable &&
                 !button01.isClickable &&
                 !button02.isClickable &&
                 !button10.isClickable &&
@@ -98,12 +97,11 @@ class MainActivity : AppCompatActivity() {
                 !button12.isClickable &&
                 !button20.isClickable &&
                 !button21.isClickable &&
-                !button22.isClickable ){
+                !button22.isClickable
+        ) {
             Toast.makeText(this, "Free", Toast.LENGTH_SHORT).show()
+
         }
-
-    }
-
     }
     private fun showWinnerToast(winnerSymbol:String){
         Toast.makeText(this, "Winner is $winnerSymbol", Toast.LENGTH_SHORT).show()
