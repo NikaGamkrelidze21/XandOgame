@@ -105,7 +105,19 @@ class MainActivity : AppCompatActivity() {
     }
     private fun showWinnerToast(winnerSymbol:String){
         Toast.makeText(this, "Winner is $winnerSymbol", Toast.LENGTH_SHORT).show()
+        gameEnd(button00)
+        gameEnd(button01)
+        gameEnd(button02)
+        gameEnd(button10)
+        gameEnd(button11)
+        gameEnd(button12)
+        gameEnd(button20)
+        gameEnd(button21)
+        gameEnd(button22)
             }
+    private fun gameEnd(button: Button){
+        button.isClickable = false
+    }
     private fun reNew(button: Button){
         button.text = ""
         button.isClickable = true
