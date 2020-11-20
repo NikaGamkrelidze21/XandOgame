@@ -90,20 +90,20 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        else if (isFree()) Toast.makeText(this, "Free", Toast.LENGTH_SHORT).show()
+        else if (!button00.isClickable &&
+                !button01.isClickable &&
+                !button02.isClickable &&
+                !button10.isClickable &&
+                !button11.isClickable &&
+                !button12.isClickable &&
+                !button20.isClickable &&
+                !button21.isClickable &&
+                !button22.isClickable ){
+            Toast.makeText(this, "Free", Toast.LENGTH_SHORT).show()
+        }
 
     }
-    private fun isFree(): Boolean {
-        if (!button00.isClickable &&
-            !button01.isClickable &&
-            !button02.isClickable &&
-            !button10.isClickable &&
-            !button11.isClickable &&
-            !button12.isClickable &&
-            !button20.isClickable &&
-            !button21.isClickable &&
-            !button22.isClickable
-                ){return true}
+
     }
     private fun showWinnerToast(winnerSymbol:String){
         Toast.makeText(this, "Winner is $winnerSymbol", Toast.LENGTH_SHORT).show()
